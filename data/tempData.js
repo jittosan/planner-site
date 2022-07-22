@@ -6,4 +6,23 @@ let tempModuleData = [
     {code:'PC2020', name:'Electromagnetics for Engineers'}
 ]
 
-export {tempModuleData}
+/*
+ * Primary Majors, Second Majors, Minors, Specialisations, Special Courses
+*/
+let exampleCourses = [
+    {name:'Engineering Science'},
+    {name:'Physics'},
+    {name:'Philosophy'}
+]
+
+let exampleSchedules = [
+    {name:'Basic'},
+    {name:'Nanoscience Focus'},
+    {name:'Philosophy'}
+]
+
+export {
+    tempModuleData,
+    exampleCourses,
+    exampleSchedules
+}

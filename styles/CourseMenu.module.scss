@@ -12,13 +12,15 @@
         width: 100%;
         height: auto;
         padding: 0.5ch 2ch;
+        box-sizing: border-box;
+        border: solid 4px transparent;
 
         display: grid;
         grid-template-columns: 8ch 1fr;
         text-align: left;
 
         &:hover { 
-            border: solid 1px black;
+            border: solid 4px black;
         }
     }
 }

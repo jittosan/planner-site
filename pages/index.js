@@ -1,5 +1,5 @@
 import CourseMenu from '../components/CourseMenu'
-import ScheduleView from '../components/ScheduleView'
+import ScheduleMenu from '../components/ScheduleMenu'
 import Sidebar from '../components/Sidebar'
 import styles from '../styles/index.module.scss'
 
@@ -11,7 +11,7 @@ export default function Home() {
             </div>
             {/* <Sidebar /> */}
             <div className={styles.content}>
-                <ScheduleView />
+                <ScheduleMenu />
                 <CourseMenu />
             </div>
         </main>
