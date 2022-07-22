@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 //temporary data object
 
-const ScheduleView = () => {
+const CourseMenu = () => {
     // state to store module information
     const [moduleList, setmoduleList] = useState([])
     const pushModule = (newModule) => {setmoduleList(moduleList.push(newModule))}
@@ -15,9 +15,8 @@ const ScheduleView = () => {
     
     return (
         <div className={styles.container}>
-            <h2>Schedules</h2>
-            <strong>Modules:</strong>
-            {moduleList.map((item, index) => <ModuleItem moduleData={item} key={index} />)}
+            <h2>Courses</h2>
+            {/* {moduleList.map((item, index) => <ModuleItem moduleData={item} key={index} />)} */}
             <ModuleEntry pushModule={pushModule} />
         </div>
     )
@@ -35,9 +34,9 @@ const ModuleItem = ({ moduleData }) => {
 const ModuleEntry = ({ pushModule }) => {
     return(
         <div>
-            <p> -- Add Module -- </p>
+            <p> -- Add Course -- </p>
         </div>
     )
 }
 
-export default ScheduleView
+export default CourseMenu
