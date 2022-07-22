@@ -19,17 +19,20 @@ const ScheduleMenu = () => {
         setScheduleList(data)
     }, [])
 
+    
     return (
         <div className={styles.container}>
-            <h2>Schedules</h2>
             {
                 isScheduleOpened() ? 
                     <>
+                    <p className={styles.backButton} onClick={() => closeSchedule()}>Back</p>
+                    <h2>{scheduleList[selectedScheduleIndex].name}</h2>
                     <ScheduleView closeSchedule={closeSchedule} />
                     </>
                     : 
                     <>
-                    {scheduleList.map((item, index) => <ScheduleItem scheduleData={item} selectSchedule={openSchedule} key={index} />)}
+                    <h2>Schedules</h2>
+                    {scheduleList.map((item, index) => <ScheduleItem scheduleData={item} selectSchedule={() => openSchedule(index)} key={index} />)}
                     <ScheduleEntry />
                     </>
             }
