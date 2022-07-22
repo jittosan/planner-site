@@ -24,7 +24,7 @@ const ScheduleView = () => {
 
 const ModuleItem = ({ moduleData }) => {
     return(
-        <div>
+        <div className={styles.moduleItem}>
             <strong>{moduleData.code}</strong>
             <p>{moduleData.name}</p>
         </div>
