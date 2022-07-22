@@ -1,0 +1,17 @@
+.container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding: 5ch 2ch 2ch 2ch;
+
+    .backButton {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 1ch;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

@@ -2,13 +2,17 @@
     height: 100%;
     width: 100%;
     padding: 2ch 5ch;
-
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 
-    .moduleItem {
+    h2 {
+        margin-bottom: 1ch;
+    }
+
+    .scheduleItem {
         width: 100%;
         height: auto;
         padding: 0.5ch 2ch;
@@ -21,6 +25,40 @@
 
         &:hover { 
             border: solid 4px black;
+            cursor: pointer;
+        }
+    }
+
+    .scheduleEntry {
+        position: absolute;
+        bottom: 10ch;
+        left: 0;
+        width: 100%;
+        color: rebeccapurple;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 2ch;
+
+        .addButton {
+            background-color: rebeccapurple;
+            color: white;
+            padding: 2ch;
+            text-decoration: none;
+            border: none;
+            font-family: 'Rubik', cursive;
+            margin: 0ch 0.5rem;
+        }
+
+        .uploadButton {
+            background-color: rebeccapurple;
+            color: white;
+            padding: 2ch;
+            text-decoration: none;
+            border: none;
+            font-family: 'Rubik', cursive;
+            margin: 0ch 0.5rem;
         }
     }
 }
