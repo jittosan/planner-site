@@ -25,9 +25,9 @@ const ScheduleMenu = () => {
             {
                 isScheduleOpened() ? 
                     <>
-                    <p className={styles.backButton} onClick={() => closeSchedule()}>Back</p>
+                    <p className={styles.backButton} onClick={() => closeSchedule()}>{'<'} Back</p>
                     <h2>{scheduleList[selectedScheduleIndex].name}</h2>
-                    <ScheduleView closeSchedule={closeSchedule} />
+                    <ScheduleView />
                     </>
                     : 
                     <>
