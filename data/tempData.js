@@ -10,15 +10,27 @@ let tempModuleData = [
  * Primary Majors, Second Majors, Minors, Specialisations, Special Courses
 */
 let exampleCourses = [
-    {name:'Engineering Science'},
-    {name:'Physics'},
-    {name:'Philosophy'}
+    {
+        name:'Engineering Science'
+    },
+    {
+        name:'Physics'
+    },
+    {
+        name:'Philosophy'
+    }
 ]
 
 let exampleSchedules = [
-    {name:'Basic'},
-    {name:'Nanoscience Focus'},
-    {name:'Philosophy'}
+    {
+        name:'Basic'
+    },
+    {
+        name:'Nanoscience Focus'
+    },
+    {
+        name:'Philosophy'
+    }
 ]
 
 export {

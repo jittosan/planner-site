@@ -9,7 +9,6 @@ export default function Home() {
         <>
         <Head>
             <title>Academic Planner</title>
-            <meta>Academic Planner by ESP</meta>
         </Head>
         <main className={styles.main}>
             <div className={styles.titleCard}>
