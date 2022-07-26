@@ -3,17 +3,20 @@ import { MdOutlineChromeReaderMode } from 'react-icons/md'
 import React, { useEffect, useRef } from 'react'
 import appConfig from '../config/app-config.json'
 import styles from '../styles/SplashScreen.module.scss'
+import { useStartUpAnimationContext } from '../context/startUpAnimationContext'
 
 let selector = (el, tag) => {return gsap.utils.selector(el)(tag)}
 
-const SplashScreen = () => {
+const SplashScreen = ({  }) => {
     //ANIMATION EFFECTS
     let contentRef = useRef()
     let containerRef = useRef()
+    const timeline = useStartUpAnimationContext()
     useEffect(() => {
-        let tl = gsap.timeline()
+        // init new timeline if not predefined
+        if (timeline===undefined) {let timeline = gsap.timeline()}
         // fade in splash screen
-        tl.fromTo(contentRef, {
+        timeline.fromTo(contentRef, {
             opacity: 0,
             // backgroundColor: 'white'
         }, {
@@ -22,7 +25,7 @@ const SplashScreen = () => {
             duration: 0.6,
         })
         // splash wave out
-        tl.fromTo(containerRef, {
+        timeline.fromTo(containerRef, {
             height: '100vh',
         }, {
             height: '10vh',
@@ -31,13 +34,13 @@ const SplashScreen = () => {
             ease: Power3.easeInOut
         })
         // fade into content
-        tl.fromTo(selector(contentRef, "h1"), {
+        timeline.fromTo(selector(contentRef, "h1"), {
             fontSize: '4rem',
         }, {
             fontSize: '1.5rem',
             duration: 0.4,
         }, "<25%")
-        tl.fromTo(selector(contentRef, 'p'), {
+        timeline.fromTo(selector(contentRef, 'p'), {
             opacity: 1,
             scale: 1
         }, {

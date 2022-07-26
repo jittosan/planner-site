@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 // create schedule content using React Context API
 const SelectScheduleContext = createContext()
@@ -7,7 +7,7 @@ const SelectScheduleContext = createContext()
 const SelectScheduleContextWrapper = ({ children }) => {
     const [selectedScheduleIndex, setSelectedScheduleIndex] = useState(0)
     return(
-        <SelectScheduleContext.Provider value={''}>
+        <SelectScheduleContext.Provider value={[selectedScheduleIndex, setSelectedScheduleIndex]}>
             { children }
         </SelectScheduleContext.Provider>
     )

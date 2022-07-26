@@ -6,9 +6,13 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 10vh 1fr;
-    background-color: rgb(220, 220, 220);
+    // background-color: rgb(161, 167, 169);
+    font-family: 'Rubik', cursive;
 
     .content {
         grid-row: 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
     }
 }
