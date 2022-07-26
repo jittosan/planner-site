@@ -22,7 +22,7 @@ const home = () => {
         <StartUpAnimationContextWrapper content={tl}>
         <div className={styles.container}>
             <SplashScreen />
-            <CourseContextWrapper>
+            <CourseContextWrapper content={courseData}>
             <ScheduleContextWrapper content={scheduleData}>
             <SelectScheduleContextWrapper>
             <main className={styles.content}>
@@ -49,5 +49,20 @@ let scheduleData = [
     },
     {
         name: 'Double Major - IDP'
+    }
+]
+
+let courseData = [
+    {
+        name: 'Engineering Science',
+        type: 'Major'
+    },
+    {
+        name: 'Physics',
+        type: '2nd Major'
+    },
+    {
+        name: 'IDP',
+        type: '2nd Major'
     }
 ]

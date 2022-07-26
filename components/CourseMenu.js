@@ -1,10 +1,14 @@
 import { gsap } from 'gsap'
 import React, { useEffect, useRef } from 'react'
 import { MdAdd, MdOutlineFileUpload } from 'react-icons/md'
+import { useCourseContext } from '../context/courseContext'
 import { useStartUpAnimationContext } from '../context/startUpAnimationContext'
 import styles from '../styles/CourseMenu.module.scss'
 
 const CourseMenu = ({  }) => {
+    // load course data from context
+    let courseData = useCourseContext()
+
     // ANIMATE LOAD-IN
     let containerRef = useRef()
     let timeline = useStartUpAnimationContext()
@@ -22,11 +26,11 @@ const CourseMenu = ({  }) => {
 
     return (
         <div className={styles.container} ref={(el) => {containerRef=el}}>
-            <div>
-            <h2>Courses</h2>
+            <div className={styles.headerContainer}>
+                <h2>Courses</h2>
             </div>
-            <div>
-                <p>Modules</p>
+            <div className={styles.courseContainer}>
+            {courseData.map((_, index) => {return <CourseMenuItem key={index} index={index} />})}
             </div>
             <div className={styles.buttonContainer}>
                 <button><MdAdd /></button>
@@ -37,3 +41,15 @@ const CourseMenu = ({  }) => {
 }
 
 export default CourseMenu
+
+const CourseMenuItem = ({ index }) => {
+    // get individual Course data
+    let course = useCourseContext()[index]
+
+    return(
+        <div className={styles.courseMenuItem}>
+            <strong>{course.name}</strong>
+            <span className={styles.typeTag}>{course.type}</span>
+        </div>
+    )
+}

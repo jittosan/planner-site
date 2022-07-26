@@ -11,6 +11,39 @@
     grid-template-columns: 1fr;
     grid-template-rows: 5ch 1fr 5ch;
 
+    .headerContainer {
+        padding: 0 2ch;
+    }
+
+    .courseContainer {
+        color: color('main');
+
+        .courseMenuItem {
+            padding: 2ch;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            .typeTag {
+                height: 100%;
+                width: auto;
+                margin-left: 1.5ch;
+                padding: 0.1ch 1ch;
+                border-radius: 1ch;
+                color: rgb(85, 85, 85);
+                background-color: rgb(207, 207, 207);
+                border: solid rgb(156, 156, 156) 1px;
+                font-size: 0.85rem;
+            }
+
+            &:hover {
+                background-color: whitesmoke;
+                cursor: pointer;
+            }
+        }
+    }
+
     .buttonContainer {
         width: 100%;
         padding: 1ch 0;
