@@ -12,12 +12,12 @@ const ScheduleMenu = ({  }) => {
         // if (timeline===undefined) {let timeline = gsap.timeline({delay: 1.6})}
         timeline.fromTo(containerRef, {
             opacity: 0,
-            y: 100
+            y: 50
         }, {
             opacity: 1,
             y : 0,
-            duration: 0.6
-        })  
+            duration: 0.5
+        }, "<=25%")  
     }, [timeline])
 
     return (

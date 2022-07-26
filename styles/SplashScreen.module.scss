@@ -16,9 +16,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border-bottom: solid red 5px;
-        border-bottom: solid rgb(156, 156, 156) 2px;
-        background-color: color('back');
+        background-color: color('secondary');
+        color: color('main');
 
         svg {
             font-size: 5rem;

@@ -18,10 +18,10 @@ const SplashScreen = ({  }) => {
         // fade in splash screen
         timeline.fromTo(contentRef, {
             opacity: 0,
-            // backgroundColor: 'white'
+            scale: 1.2
         }, {
             opacity: 1,
-            // backgroundColor: 'grey',
+            scale: 1,
             duration: 0.6,
         })
         // splash wave out
@@ -35,11 +35,12 @@ const SplashScreen = ({  }) => {
         })
         // fade into content
         timeline.fromTo(selector(contentRef, "h1"), {
-            fontSize: '4rem',
+            fontSize: '4.5rem',
         }, {
             fontSize: '1.5rem',
-            duration: 0.4,
-        }, "<25%")
+            duration: 0.6,
+            ease: Power3.easeInOut
+        }, "<15%")
         timeline.fromTo(selector(contentRef, 'p'), {
             opacity: 1,
             scale: 1
