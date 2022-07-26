@@ -1,0 +1,32 @@
+.container { 
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    background-color: white;
+    color: black;
+    overflow: hidden;
+
+    .content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        opacity: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            font-size: 5rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}
