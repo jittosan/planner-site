@@ -1,10 +1,12 @@
+@import 'main';
+
 .container { 
     position: absolute;
     width: 100vw;
     height: 100vh;
     z-index: 99;
-    background-color: white;
-    color: black;
+    background-color: color('back');
+    color: color('main');
     overflow: hidden;
 
     .content {
