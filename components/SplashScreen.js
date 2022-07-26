@@ -14,9 +14,11 @@ const SplashScreen = () => {
         let tl = gsap.timeline()
         // fade in splash screen
         tl.fromTo(contentRef, {
-            opacity: 0
+            opacity: 0,
+            // backgroundColor: 'white'
         }, {
             opacity: 1,
+            // backgroundColor: 'grey',
             duration: 0.6,
         })
         // splash wave out
@@ -45,7 +47,6 @@ const SplashScreen = () => {
         }, "<25%")
     
     }, [])
-
 
     return (
         <div className={styles.container} ref={(el) => {containerRef=el}}>
