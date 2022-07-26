@@ -9,6 +9,7 @@ import styles from '../styles/home.module.scss'
 import ScheduleMenu from '../components/ScheduleMenu'
 import gsap from 'gsap'
 import { StartUpAnimationContextWrapper } from '../context/startUpAnimationContext'
+import CourseMenu from '../components/CourseMenu'
 
 const home = () => {
     // initalise loading timeline
@@ -26,7 +27,7 @@ const home = () => {
             <SelectScheduleContextWrapper>
             <main className={styles.content}>
                 <ScheduleMenu />
-                <h1>CONTENT </h1>
+                <CourseMenu />
             </main>
             </SelectScheduleContextWrapper>
             </ScheduleContextWrapper>

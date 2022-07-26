@@ -48,8 +48,7 @@ const SplashScreen = ({  }) => {
             scale: 0.5,
             duration: 0.4
         }, "<25%")
-    
-    }, [])
+    }, [timeline])
 
     return (
         <div className={styles.container} ref={(el) => {containerRef=el}}>

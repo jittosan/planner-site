@@ -1,9 +1,9 @@
 import gsap from 'gsap'
 import React, { useEffect, useRef } from 'react'
 import { useStartUpAnimationContext } from '../context/startUpAnimationContext'
-import styles from '../styles/ScheduleMenu.module.scss'
+import styles from '../styles/CourseMenu.module.scss'
 
-const ScheduleMenu = ({  }) => {
+const CourseMenu = ({  }) => {
     // ANIMATE LOAD-IN
     let containerRef = useRef()
     let timeline = useStartUpAnimationContext()
@@ -16,13 +16,13 @@ const ScheduleMenu = ({  }) => {
             opacity: 1,
             y : 0,
             duration: 0.6
-        })  
+        }, "<=25%")  
     }, [timeline])
 
     return (
         <div className={styles.container} ref={(el) => {containerRef=el}}>
             <div>
-                <h2>Schedules</h2>
+            <h2>Courses</h2>
             </div>
             <div>
                 <p>Modules</p>
@@ -34,4 +34,4 @@ const ScheduleMenu = ({  }) => {
     )
 }
 
-export default ScheduleMenu
+export default CourseMenu
