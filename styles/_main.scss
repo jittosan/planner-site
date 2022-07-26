@@ -1,0 +1,11 @@
+$color-scheme : (
+    'back' : white,
+    'main' : black,
+    'primary' : orange,
+    'secondary' : teal,
+    'error' : red
+);
+
+@function color($code) {
+    @return map-get($color-scheme, $code);
+};
