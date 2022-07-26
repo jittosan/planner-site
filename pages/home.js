@@ -23,7 +23,7 @@ const home = () => {
         <div className={styles.container}>
             <SplashScreen />
             <CourseContextWrapper>
-            <ScheduleContextWrapper>
+            <ScheduleContextWrapper content={scheduleData}>
             <SelectScheduleContextWrapper>
             <main className={styles.content}>
                 <ScheduleMenu />
@@ -39,3 +39,15 @@ const home = () => {
 }
 
 export default home
+
+let scheduleData = [
+    {
+        name: 'Basic Plan'
+    },
+    {
+        name: 'Double Major - Physics'
+    },
+    {
+        name: 'Double Major - IDP'
+    }
+]

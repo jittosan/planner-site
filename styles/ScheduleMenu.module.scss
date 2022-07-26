@@ -11,9 +11,26 @@
     grid-template-columns: 1fr;
     grid-template-rows: 5ch 1fr 5ch;
 
+    .headerContainer {
+        padding: 0 2ch;
+    }
+
+    .scheduleContainer {
+        color: color('main');
+
+        .scheduleMenuItem {
+            padding: 2ch;
+
+            &:hover {
+                background-color: whitesmoke;
+                cursor: pointer;
+            }
+        }
+    }
+
     .buttonContainer {
         width: 100%;
-        padding: 1ch 0;
+        padding: 2ch 0;
         display: flex;
         flex-direction: row;
         justify-content: center;
