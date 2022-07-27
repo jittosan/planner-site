@@ -46,9 +46,9 @@ let scheduleData = [
         description : 'ESP Recommended Schedule',
         semesters: [
             {
-                name : "Sem 1",
-                year : 'Year 1',
-                sem: 'Sem 1',
+                name : "Semester 1",
+                year : 1,
+                sem: 1,
                 acadYear : 'AY2022-2023',
                 modules : ['ESP1111', 'MA1511', 'MA1512']
             }
@@ -59,9 +59,9 @@ let scheduleData = [
         description : 'ESP with a 2nd major in Physics',
         semesters: [
             {
-                name : "Sem 1",
-                year : 'Year 1',
-                sem: 'Sem 1',
+                name : "Semester 1",
+                year : 1,
+                sem: 1,
                 acadYear : 'AY2022-2023',
                 modules : ['ESP1111', 'MA1511', 'MA1512']
             }
@@ -72,9 +72,9 @@ let scheduleData = [
         description : 'ESP with a 2nd major in IDP',
         semesters: [
             {
-                name : "Sem 1",
-                year : 'Year 1',
-                sem: 'Sem 1',
+                name : "Semester 1",
+                year : 1,
+                sem: 1,
                 acadYear : 'AY2022-2023',
                 modules : ['ESP1111', 'MA1511', 'MA1512']
             }

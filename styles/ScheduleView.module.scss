@@ -1,1 +1,46 @@
 @import 'main';
+
+.scheduleContainer {
+    width: 100%;
+    height: 100%;
+    padding: 2ch 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .headerContainer {
+        padding: 0 2ch;
+    }
+
+    .moduleContainer {
+        margin-top: 2ch;
+        height: 100%;
+        width: 100%;
+
+        .semesterModuleItem {
+            padding: 1.5ch 2ch;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            span {
+                // background-color: color('primary');
+                background-color: rgb(255, 181, 43);
+                padding: 0.5ch 2ch;
+                width: 10ch;
+                margin-right: 2ch;
+            }
+
+            &:hover {
+                // color: color('secondary');
+                background-color: whitesmoke;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.footerContainer {
+    padding: 2ch;
+}
