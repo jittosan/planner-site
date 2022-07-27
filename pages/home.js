@@ -42,13 +42,43 @@ export default home
 
 let scheduleData = [
     {
-        name: 'Basic Plan'
+        name: 'Basic Plan',
+        description : 'ESP Recommended Schedule',
+        semesters: [
+            {
+                name : "Sem 1",
+                year : 'Year 1',
+                sem: 'Sem 1',
+                acadYear : 'AY2022-2023',
+                modules : ['ESP1111', 'MA1511', 'MA1512']
+            }
+        ]
     },
     {
-        name: 'Double Major - Physics'
+        name: 'Double Major - Physics',
+        description : 'ESP with a 2nd major in Physics',
+        semesters: [
+            {
+                name : "Sem 1",
+                year : 'Year 1',
+                sem: 'Sem 1',
+                acadYear : 'AY2022-2023',
+                modules : ['ESP1111', 'MA1511', 'MA1512']
+            }
+        ]
     },
     {
-        name: 'Double Major - IDP'
+        name: 'Double Major - IDP',
+        description : 'ESP with a 2nd major in IDP',
+        semesters: [
+            {
+                name : "Sem 1",
+                year : 'Year 1',
+                sem: 'Sem 1',
+                acadYear : 'AY2022-2023',
+                modules : ['ESP1111', 'MA1511', 'MA1512']
+            }
+        ]
     }
 ]
 
