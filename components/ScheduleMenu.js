@@ -6,8 +6,8 @@ import { useScheduleContext } from '../context/scheduleContext'
 import { useSelectScheduleContext } from '../context/selectScheduleContext'
 import { useStartUpAnimationContext } from '../context/startUpAnimationContext'
 import { refChildSelector } from '../scripts/utils'
+import SemesterView from './SemesterView'
 import styles from '../styles/ScheduleMenu.module.scss'
-import ScheduleView from './ScheduleView'
 
 const ScheduleMenu = ({  }) => {
     // get schedule data from context
@@ -100,7 +100,7 @@ const ScheduleMenu = ({  }) => {
             {
                 isScheduleSelected() ?
                 <>
-                    <ScheduleView />
+                    <SemesterView />
                 </>
                 :
                 <>

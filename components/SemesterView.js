@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { useScheduleContext } from '../context/scheduleContext'
 import { useSelectScheduleContext } from '../context/selectScheduleContext'
-import styles from '../styles/ScheduleView.module.scss'
+import styles from '../styles/SemesterView.module.scss'
 
-const ScheduleView = () => {
+const SemesterView = () => {
     // get schedule data
     let [selectedScheduleIndex, _] = useSelectScheduleContext()
     let scheduleData = useScheduleContext()[selectedScheduleIndex]
@@ -30,7 +30,7 @@ const ScheduleView = () => {
     )
 }
 
-export default ScheduleView
+export default SemesterView
 
 const SemesterModuleItem = ({ moduleData }) => {
 
