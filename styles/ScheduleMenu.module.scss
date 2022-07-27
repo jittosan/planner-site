@@ -10,15 +10,27 @@
 
     .headerContainer {
         padding: 0 2ch;
+        position: relative;
 
         .backButton {
             text-decoration: none;
             border: none;
             padding: 0.1ch 1ch;
-            // position: absolute;
+            position: absolute;
+            top: 0;
+            left: -5ch;
+            width: auto;
+            height: 100%;
+            background-color: color('back');
+            // background-color: whitesmoke;
+
+            svg {
+                font-size: 1.5rem;
+            }
 
             &:hover {
                 color: color('secondary');
+                background-color: whitesmoke;
                 cursor: pointer;
             }
         }

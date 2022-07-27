@@ -1,6 +1,7 @@
 import { gsap, Power3 } from 'gsap'
 import React, { useEffect, useRef, useState } from 'react'
 import { MdAdd, MdOutlineFileUpload } from 'react-icons/md'
+import { IoArrowBack } from 'react-icons/io5'
 import { useScheduleContext } from '../context/scheduleContext'
 import { useSelectScheduleContext } from '../context/selectScheduleContext'
 import { useStartUpAnimationContext } from '../context/startUpAnimationContext'
@@ -85,7 +86,7 @@ const ScheduleMenu = ({  }) => {
                 {
                     isScheduleSelected() ?
                     <>
-                    <button className={styles.backButton} onClick={() => resetSchedule()}>Back</button>
+                    <button className={styles.backButton} onClick={() => resetSchedule()}><IoArrowBack /></button>
                     <h2>{scheduleData[selectedScheduleIndex].name}</h2>
                     <p>{scheduleData[selectedScheduleIndex].description}</p>
                     </>
