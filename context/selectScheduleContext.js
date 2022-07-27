@@ -5,7 +5,7 @@ const SelectScheduleContext = createContext()
 
 // context Provider wrapper for App
 const SelectScheduleContextWrapper = ({ children }) => {
-    const [selectedScheduleIndex, setSelectedScheduleIndex] = useState(0)
+    const [selectedScheduleIndex, setSelectedScheduleIndex] = useState(-1)
     return(
         <SelectScheduleContext.Provider value={[selectedScheduleIndex, setSelectedScheduleIndex]}>
             { children }

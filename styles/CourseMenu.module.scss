@@ -13,9 +13,14 @@
 
     .headerContainer {
         padding: 0 2ch;
+        
+        p {
+            color: rgb(151, 151, 151);
+        }
     }
 
     .courseContainer {
+        padding-top: 1ch;
         color: color('main');
 
         .courseMenuItem {
@@ -39,6 +44,7 @@
 
             &:hover {
                 background-color: whitesmoke;
+                color: color('secondary');
                 cursor: pointer;
             }
         }

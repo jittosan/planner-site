@@ -13,16 +13,22 @@
 
     .headerContainer {
         padding: 0 2ch;
+
+        p {
+            color: rgb(151, 151, 151);
+        }
     }
 
     .scheduleContainer {
         color: color('main');
+        padding-top: 1ch;
 
         .scheduleMenuItem {
             padding: 2ch;
 
             &:hover {
                 background-color: whitesmoke;
+                color: color('secondary');
                 cursor: pointer;
             }
         }

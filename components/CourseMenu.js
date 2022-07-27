@@ -28,6 +28,7 @@ const CourseMenu = ({  }) => {
         <div className={styles.container} ref={(el) => {containerRef=el}}>
             <div className={styles.headerContainer}>
                 <h2>Courses</h2>
+                <p>Your courses & programmes</p>
             </div>
             <div className={styles.courseContainer}>
             {courseData.map((_, index) => {return <CourseMenuItem key={index} index={index} />})}

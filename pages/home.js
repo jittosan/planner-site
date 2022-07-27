@@ -54,7 +54,7 @@ let scheduleData = [
 
 let courseData = [
     {
-        name: 'Engineering Science',
+        name: 'Engineering Science Programme (ESP)',
         type: 'Major'
     },
     {
@@ -62,7 +62,7 @@ let courseData = [
         type: '2nd Major'
     },
     {
-        name: 'IDP',
+        name: 'Innovation & Design Programme (IDP)',
         type: '2nd Major'
     }
 ]
