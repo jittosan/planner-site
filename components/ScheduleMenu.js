@@ -105,7 +105,13 @@ const ScheduleMenu = ({  }) => {
                 :
                 <>
                     <div className={styles.scheduleContainer}>
-                        {scheduleData.map((item, index) => {return <ScheduleMenuItem key={index} index={index} onSelect={() => selectSchedule(index)} />})}
+                        {
+                            scheduleData.length===0 ?
+                            <p className={styles.noScheduleText}>You currently do not have any schedules created. <br /><br />
+                            Create/Upload schedules using the options below.</p>
+                            :
+                            scheduleData.map((item, index) => {return <ScheduleMenuItem key={index} index={index} onSelect={() => selectSchedule(index)} />})
+                        }
                     </div>
                     <ScheduleMenuButtonTray />
                 </>

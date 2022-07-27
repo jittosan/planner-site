@@ -44,6 +44,12 @@
         color: color('main');
         padding-top: 1ch;
 
+        .noScheduleText {
+            margin: auto;
+            padding: 2ch;
+            color: grey;
+        }
+
         .scheduleMenuItem {
             padding: 2ch;
 
