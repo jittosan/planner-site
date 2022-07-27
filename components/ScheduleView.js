@@ -21,6 +21,7 @@ const ScheduleView = () => {
             <div className={styles.moduleContainer}>
                 {currentSemData.modules.map((item, index) => <SemesterModuleItem moduleData={item} key={index} />)}
             </div>
+            <SemesterModuleEntry />
         </div>
         <div className={styles.footerContainer}>
             <p>Pages</p>
@@ -38,5 +39,14 @@ const SemesterModuleItem = ({ moduleData }) => {
             <span>{moduleData}</span>
             <p>Module Title</p>
         </div>
+    )
+}
+
+const SemesterModuleEntry = ({  }) => {
+    return(
+        <form className={styles.moduleEntry}>
+            <label>New Module: </label>
+            <input placeholder='Module code..' />
+        </form>
     )
 }
