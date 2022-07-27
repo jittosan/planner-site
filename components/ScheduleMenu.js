@@ -6,6 +6,7 @@ import { useSelectScheduleContext } from '../context/selectScheduleContext'
 import { useStartUpAnimationContext } from '../context/startUpAnimationContext'
 import { refChildSelector } from '../scripts/utils'
 import styles from '../styles/ScheduleMenu.module.scss'
+import ScheduleView from './ScheduleView'
 
 const ScheduleMenu = ({  }) => {
     // get schedule data from context
@@ -16,46 +17,51 @@ const ScheduleMenu = ({  }) => {
     const resetSchedule = () => {
         let tl = gsap.timeline()
         tl.fromTo(containerRef, {
-            y: 0,
-            opacity: 1
-        }, {
-            y:-20,
-            opacity: 0,
-            duration: 0.3,
-            ease: Power3.easeInOut
-        })
-        tl.fromTo(containerRef, {
-            y: -20,
-            opacity: 0
-        }, {
-            y:0,
+            x: 0,
             opacity: 1,
-            duration: 0.3,
+        }, {
+            x:-10,
+            opacity: 0,
+            duration: 0.2,
+            ease: Power3.easeInOut,
+            
+        })
+        tl.add(() => {setselectedScheduleIndex(-1)}, ">-35%")
+        tl.fromTo(containerRef, {
+            x: -10,
+            opacity: 0,
+        }, {
+            x:0,
+            opacity: 1,
+            duration: 0.2,
             ease: Power3.easeInOut
-        }, "<=75%")
-        setselectedScheduleIndex(-1)
+        }, "<=40%")
+        // setselectedScheduleIndex(-1)
     }
     const selectSchedule = (index) => {
         let tl = gsap.timeline()
         tl.fromTo(containerRef, {
-            y: 0,
-            opacity: 1
+            x: 0,
+            opacity: 1,
+            
         }, {
-            y:-20,
+            x:-10,
             opacity: 0,
-            duration: 0.3,
+            duration: 0.2,
             ease: Power3.easeInOut
         })
+        // swipe down buttons?
+        tl.add(() => {setselectedScheduleIndex(index)}, ">-35%")
         tl.fromTo(containerRef, {
-            y: -20,
-            opacity: 0
+            x: -10,
+            opacity: 0,
         }, {
-            y:0,
+            x:0,
             opacity: 1,
-            duration: 0.3,
+            duration: 0.2,
             ease: Power3.easeInOut
-        }, "<=75%")
-        setselectedScheduleIndex(index)
+        }, "<=40%")
+        
     }
 
     // ANIMATE LOAD-IN
@@ -79,6 +85,7 @@ const ScheduleMenu = ({  }) => {
                 {
                     isScheduleSelected() ?
                     <>
+                    <button className={styles.backButton} onClick={() => resetSchedule()}>Back</button>
                     <h2>{scheduleData[selectedScheduleIndex].name}</h2>
                     <p>{scheduleData[selectedScheduleIndex].description}</p>
                     </>
@@ -92,17 +99,14 @@ const ScheduleMenu = ({  }) => {
             {
                 isScheduleSelected() ?
                 <>
-                    <p onClick={() => resetSchedule()}>Selected</p>
+                    <ScheduleView />
                 </>
                 :
                 <>
                     <div className={styles.scheduleContainer}>
                         {scheduleData.map((item, index) => {return <ScheduleMenuItem key={index} index={index} onSelect={() => selectSchedule(index)} />})}
                     </div>
-                    <div className={styles.buttonContainer}>
-                        <button><MdAdd /></button>
-                        <button><MdOutlineFileUpload /></button>
-                    </div>
+                    <ScheduleMenuButtonTray />
                 </>
             }
         </div>
@@ -154,6 +158,31 @@ const ScheduleMenuItem = ({ index, onSelect }) => {
         onClick={() => onSelect()}
         >
             <strong>{schedule.name}</strong>
+        </div>
+    )
+}
+
+const ScheduleMenuButtonTray = ({  }) => {
+    // ANIMATION EFFECTS
+    let containerRef = useRef([])
+    useEffect(() => {
+        let tl = gsap.timeline()
+        tl.fromTo(containerRef, {
+            opacity: 0,
+            y: 5
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 0.3,
+            delay: 0.1,
+            ease: Power3.easeInOut
+        })
+    }, [])
+
+    return(
+        <div className={styles.buttonContainer} ref={(el) => {containerRef=el}}>
+            <button><MdAdd /></button>
+            <button><MdOutlineFileUpload /></button>
         </div>
     )
 }
