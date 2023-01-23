@@ -11,3 +11,12 @@ $color-scheme : (
 @function color($code) {
     @return map-get($color-scheme, $code);
 };
+
+// Layout Components
+$mobile-layout-threshold : 600px;
+
+@mixin mobile-layout() {
+    @media (max-width: $mobile-layout-threshold) {
+        @content;
+    }
+};
