@@ -1,7 +1,7 @@
 @import 'main';
 
 .container {
-    padding: 5ch 8ch;
+    padding: 5ch calc(10px + 8%);
     width: 100%;
     background-color: color('back');
     display: grid;

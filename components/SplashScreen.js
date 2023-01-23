@@ -56,7 +56,7 @@ const SplashScreen = ({  }) => {
             <div className={styles.content} ref={(el) => {contentRef=el}}>
                 {/* <MdOutlineChromeReaderMode /> */}
                 <h1>{appConfig.title}</h1>
-                <p>by ESP</p>
+                <p>by ESP Developers</p>
             </div>
         </div>
     )
